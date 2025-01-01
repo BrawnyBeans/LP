@@ -1,0 +1,26 @@
+body{
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #f4e1c1;
+    display:flex;
+    justify-content: center;/*center the content horizontally*/
+    align-items: center;/*center the content vertically*/
+    text-align: center;/*center the text*/
+    padding: 20px;
+    height: 100vh;
+    margin:0;
+}
+
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4em;
+    color:black;
+    margin: 0;
+}
+
+p{
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+    color: black;
+    margin-top: 20px;
+    padding: 10px;
+}
