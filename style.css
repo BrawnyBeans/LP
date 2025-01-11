@@ -13,10 +13,10 @@ body {
     justify-content: center;  /* Horizontally center the content */
     align-items: center;      /* Vertically center the content */
     text-align: center;
-    height: 100vh;
+    min-height: 100vh; /* Ensure the content stretches to fill the full height */
     margin: 0;
     flex-direction: column;   /* Stack all elements vertically */
-    overflow: auto;           /* Allow scrolling if needed */
+    overflow: hidden;           /* Allow scrolling if needed */
 }
 
 /* Content Wrapper */
@@ -37,13 +37,14 @@ body {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: clamp(3em, 8vw, 6em); /* Fluid typography */
     color: black;
     margin: 0;
+    line-height: 1.1;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: clamp(2em, 4vw, 4em); /* Fluid typography */
     color: black;
     margin: 0;
 }
@@ -57,15 +58,16 @@ h2 {
 
 img {
     max-width: 100%; /* Ensure the image does not overflow the container */
-    max-height: 40vh; /* Limit image height to 40% of the viewport height */
     height: auto; /* Maintain aspect ratio */
+    max-height: 40vh; /* Limit image height to 40% of the viewport height */
+    object-fit: contain; /* Ensure image scales well */
     border-radius: 10px; /* Optional: rounded corners for the image */
 }
 
 /* Paragraph Styles */
 p {
     font-family: 'Amatic SC', cursive;
-    font-size: 2em;
+    font-size: clamp(1.5em, 3vw, 2em); /* Fluid typography */
     color: black;
     margin-top: 20px;
     padding: 10px;
@@ -73,43 +75,43 @@ p {
 
 /* Media Queries for Larger Screens (Desktop) */
 @media (min-width: 768px) {
-    /* Adjust image size for desktop */
-    img {
-        max-height: 40vh; /* Reduce image height for large screens */
-    }
-
     /* Adjust font size for larger screens */
     h1 {
-        font-size: 5em;
+        font-size: clamp(4em, 8vw, 8em); /* Fluid typography */
     }
 
     h2 {
-        font-size: 2em;
+        font-size: clamp(2.5em, 4vw, 5em); /* Fluid typography */
     }
 
     p {
         font-size: 2.5em;
     }
+
+    /* Adjust image size for larger screens */
+    img {
+        max-height: 50vh;
+    }
 }
 
 /* Media Queries for Small Screens (Mobile) */
 @media (max-width: 767px) {
-    /* Adjust image size for mobile */
-    img {
-        max-height: 35vh; /* Reduce image height on mobile */
-    }
-
     /* Adjust font size for mobile */
     h1 {
-        font-size: 3em;
+        font-size: clamp(2.5em, 8vw, 5em); /* Adjust for mobile */
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: clamp(1.5em, 4vw, 3.5em); /* Adjust for mobile */
     }
 
     p {
         font-size: 1.5em;
         margin-top: 10px; /* Reduce margin on mobile for more space */
+    }
+
+    /* Adjust image size for mobile */
+    .image-container img {
+        max-height: 35vh; /* Reduce image height on mobile */
     }
 }
