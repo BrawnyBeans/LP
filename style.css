@@ -80,11 +80,11 @@ p {
 
     /* Adjust font size for larger screens */
     h1 {
-        font-size: 5em;
+        font-size: 3em;
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 0.1em;
     }
 
     p {
