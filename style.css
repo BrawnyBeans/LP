@@ -32,18 +32,14 @@ body {
 }
 
 /* Header Styles */
-.header {
-    margin-bottom: 20px;  /* Space between header and image */
-}
-
 h1 {
-    font-size: 5em;
+    font-size: 5em; /* Bigger size for h1 */
     color: black;
     margin: 0;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Half the size of h1 */
     color: black;
     margin: 0;
 }
@@ -57,7 +53,7 @@ h2 {
 
 img {
     max-width: 100%; /* Ensure the image does not overflow the container */
-    max-height: 40vh; /* Limit image height to 40% of the viewport height */
+    max-height: 60vh; /* Increase image height to 60% of the viewport height */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: rounded corners for the image */
 }
@@ -73,43 +69,39 @@ p {
 
 /* Media Queries for Larger Screens (Desktop) */
 @media (min-width: 768px) {
-    /* Adjust image size for desktop */
-    img {
-        max-height: 40vh; /* Reduce image height for large screens */
-    }
-
-    /* Adjust font size for larger screens */
     h1 {
-        font-size: 5em;
+        font-size: 5em; /* Larger size for bigger screens */
     }
-
     h2 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Keep h2 half the size of h1 */
     }
 
     p {
         font-size: 2.5em;
+    }
+
+    /* Larger image size on desktop */
+    img {
+        max-height: 60vh; /* Increase image size further on desktop */
     }
 }
 
 /* Media Queries for Small Screens (Mobile) */
 @media (max-width: 767px) {
-    /* Adjust image size for mobile */
-    img {
-        max-height: 35vh; /* Reduce image height on mobile */
-    }
-
-    /* Adjust font size for mobile */
     h1 {
-        font-size: 3em;
+        font-size: 3em; /* Smaller h1 for mobile */
     }
-
     h2 {
-        font-size: 1.2em;
+        font-size: 1.5em; /* Half the size of h1 on mobile */
     }
 
     p {
         font-size: 1.5em;
-        margin-top: 10px; /* Reduce margin on mobile for more space */
+        margin-top: 10px;
+    }
+
+    /* Larger image size on mobile */
+    img {
+        max-height: 50vh; /* Increase image height to 50% of the viewport height */
     }
 }
