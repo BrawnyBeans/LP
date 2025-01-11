@@ -1,3 +1,10 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Body Styles */
 body {
     font-family: 'Luckiest Guy', cursive;
@@ -5,39 +12,42 @@ body {
     display: flex;
     justify-content: center;  /* Horizontally center the content */
     align-items: center;      /* Vertically center the content */
-    text-align: center;
     height: 100vh;
     margin: 0;
-    flex-direction: column;   /* Stack all elements vertically */
-    overflow: auto;           /* Allow scrolling if needed */
+    flex-direction: column;   /* Stack elements vertically */
+    overflow: hidden;         /* Prevent scrolling if not needed */
 }
 
 /* Content Wrapper */
 .content {
     display: flex;
     flex-direction: column;   /* Stack content vertically */
+    justify-content: flex-start;  /* Align items from the top */
     align-items: center;      /* Horizontally center the content */
-    justify-content: center;  /* Vertically center the content */
     width: 100%;
-    max-width: 100%;
-    padding: 20px;
+    height: 100%;             /* Full height of the viewport */
+    padding: 0 20px;          /* Add padding only on the sides (left and right) */
+    overflow: hidden;         /* Prevent overflow */
 }
 
-/* Header Section Styles */
+/* Header Section */
 .header {
     display: flex;
     flex-direction: column;  /* Stack h1 and h2 vertically */
-    align-items: center;     /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
     text-align: center;
-    min-height: 30vh;         /* Ensure the header takes up at least 30% of the viewport height */
-    padding: 10px;
+    flex-grow: 1;             /* Allow header to take up remaining space */
+    padding: 10px 0;          /* Vertical padding to give space between the header's content */
+    min-height: 30vh;         /* Set minimum height for header */
+    margin-bottom: 20px;      /* Add margin-bottom to separate from the image */
 }
 
 body h1 {
-    font-size: clamp(6rem, 12vw, 12rem); /* Fluid font size with upper and lower bounds */
+    font-size: clamp(4rem, 12vw, 8rem); /* Fluid font size with upper and lower bounds */
     color: black;
-    margin: 0;
+    margin: 0;                /* Remove margin from h1 to prevent unnecessary spacing */
+    padding: 0;               /* Remove padding from h1 */
     line-height: 1.1;
     font-family: 'Luckiest Guy', cursive;
     -webkit-font-smoothing: antialiased;
@@ -47,25 +57,25 @@ body h1 {
 body h2 {
     font-size: clamp(2rem, 3vw, 4rem);  /* Fluid font size for h2 */
     color: black;
-    margin: 0;
+    margin: 0;                /* Remove margin from h2 to avoid spacing issues */
+    padding: 0;               /* Remove padding from h2 */
 }
 
 /* Image Container */
 .image-container {
-    margin-bottom: 20px;
     width: 100%;
-    max-width: 100%;
+    max-height: 50vh;         /* Set the image max-height to 50% of the viewport height */
     display: flex;
     justify-content: center;
     overflow: hidden;
+    margin-bottom: 20px;      /* Margin between the image and paragraph */
 }
 
 img {
     width: 100%;
     height: auto;
-    max-height: 60vh; /* Reduce the height of the image to free up space */
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 10px;      /* Optional: rounded corners for image */
 }
 
 /* Paragraph Section */
@@ -73,14 +83,14 @@ p {
     font-family: 'Amatic SC', cursive;
     font-size: clamp(1.5rem, 2vw, 2.5rem); /* Fluid font size for paragraphs */
     color: black;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 20px;         /* Add some space between paragraph and image */
+    padding: 10px 0;          /* Vertical padding for the paragraph text */
 }
 
 /* Media Queries for Larger Screens (Tablet/Desktop) */
 @media (min-width: 768px) {
     body h1 {
-        font-size: clamp(6rem, 8vw, 10rem);
+        font-size: clamp(6rem, 8vw, 10rem);  /* Adjust h1 size for larger screens */
     }
     body h2 {
         font-size: 4rem;
@@ -89,7 +99,7 @@ p {
         font-size: 2.5rem;
     }
     img {
-        max-height: 80vh; /* Larger images on larger screens */
+        max-height: 60vh; /* Increase image size on larger screens */
     }
 }
 
@@ -107,6 +117,6 @@ p {
         margin-top: 10px;
     }
     img {
-        max-height: 50vh; /* Even smaller images on mobile */
+        max-height: 50vh; /* Smaller image size on mobile */
     }
 }
