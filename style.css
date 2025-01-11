@@ -16,7 +16,7 @@ body {
     height: 100vh;
     margin: 0;
     flex-direction: column;   /* Stack all elements vertically */
-    overflow: auto;           /* Allow scrolling */
+    overflow: auto;           /* Allow scrolling if needed */
 }
 
 /* Content Wrapper */
@@ -57,8 +57,8 @@ h2 {
 
 img {
     max-width: 100%; /* Ensure the image does not overflow the container */
-    max-height: 45vh; /* Limit image height to 45% of the viewport height */
-    height: auto;
+    max-height: 40vh; /* Limit image height to 40% of the viewport height */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: rounded corners for the image */
 }
 
@@ -96,7 +96,7 @@ p {
 @media (max-width: 767px) {
     /* Adjust image size for mobile */
     img {
-        max-height: 35vh; /* Further reduce image height on mobile */
+        max-height: 35vh; /* Reduce image height on mobile */
     }
 
     /* Adjust font size for mobile */
