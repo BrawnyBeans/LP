@@ -1,25 +1,93 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Brawny Beans | Protein Lattes</title>
-        <!-- Google fonts for Luckiest Guy and Amatic SC-->
-         <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Amatic+SC&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="content">
-            <!--Header Section-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawny Beans | Protein Lattes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Amatic+SC&display=swap" rel="stylesheet">
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Luckiest Guy', cursive;
+            background-color: #f4e1c1;
+            display: flex;
+            justify-content: center;  /* Horizontally center the content */
+            align-items: center;      /* Vertically center the content */
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;   /* Stack all elements vertically */
+        }
+
+        /* Content Wrapper */
+        .content {
+            display: flex;
+            flex-direction: column;   /* Stack content vertically */
+            align-items: center;      /* Horizontally center the content */
+            justify-content: center;  /* Vertically center the content */
+            width: 100%;  /* Allow content to take up full width */
+        }
+
+        /* Header Styles */
+        .header {
+            margin-bottom: 20px;  /* Space between header and image */
+        }
+
+        h1 {
+            font-size: 4em;
+            color: black;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: black;
+            margin: 0;
+        }
+
+        /* Image Container */
+        .image-container {
+            margin-bottom: 20px;  /* Space between image and paragraph */
+        }
+
+        img {
+            max-width: 80%; /* Ensure the image does not overflow the container */
+            height: auto;
+            border-radius: 10px; /* Optional: rounded corners for the image */
+        }
+
+        /* Paragraph Styles */
+        p {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+            color: black;
+            margin-top: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Header Section -->
+        <div class="header">
             <h1>Brawny<br>Beans</h1>
             <h2>Protein Lattes</h2>
-            </div>
-            <!--Image Section-->
-            <div class="image">
-                <img src="images/MrBrawnyP.png" alt="Protein Latte">
-            </div>
-            <!--Text Section-->
-            <p>Coming Soon - Brewing the perfect mix for you!</p>
         </div>
-    </body>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="images/MrBrawnyP.png" alt="Protein Lattes">
+        </div>
+
+        <!-- Paragraph Section -->
+        <p>Coming Soon - Brewing the perfect mix for you!</p>
+    </div>
+</body>
 </html>
