@@ -11,7 +11,7 @@ body {
     background-color: #f4e1c1;
     display: flex;
     justify-content: center;  /* Horizontally center the content */
-    align-items: flex-start;  /* Align items at the start, to avoid overflow */
+    align-items: center;      /* Vertically center the content */
     text-align: center;
     min-height: 100vh; /* Ensure the content stretches to fill the full height */
     margin: 0;
@@ -36,14 +36,14 @@ body {
 }
 
 h1 {
-    font-size: clamp(3em, 8vw, 6em); /* Fluid typography */
+    font-size: clamp(3em, 10vw, 6em); /* Fluid typography */
     color: black;
     margin: 0;
     line-height: 1.1;
 }
 
 h2 {
-    font-size: clamp(2em, 4vw, 4em); /* Fluid typography */
+    font-size: clamp(2em, 5vw, 4em); /* Fluid typography */
     color: black;
     margin: 0;
 }
@@ -83,7 +83,7 @@ p {
     }
 
     h2 {
-        font-size: clamp(2.5em, 4vw, 5em); /* Fluid typography */
+        font-size: clamp(2.5em, 5vw, 5em); /* Fluid typography */
     }
 
     p {
