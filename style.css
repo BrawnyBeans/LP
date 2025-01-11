@@ -54,7 +54,6 @@ h2 {
 
 img {
     max-width: 100%; /* Ensure the image does not overflow the container */
-    max-height: 50vh; /* Limit image height to 50% of the viewport height */
     height: auto;
     border-radius: 10px; /* Optional: rounded corners for the image */
 }
@@ -66,4 +65,46 @@ p {
     color: black;
     margin-top: 20px;
     padding: 10px;
+}
+
+/* Media Queries for Larger Screens (Desktop) */
+@media (min-width: 768px) {
+    /* Adjust image size for desktop */
+    img {
+        max-height: 45vh; /* Limit image height on large screens */
+    }
+
+    /* Adjust font size for larger screens */
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 2.5em;
+    }
+}
+
+/* Media Queries for Small Screens (Mobile) */
+@media (max-width: 767px) {
+    /* Adjust image size for mobile */
+    img {
+        max-height: 50vh; /* Limit image height on mobile */
+    }
+
+    /* Adjust font size for mobile */
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
 }
