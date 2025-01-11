@@ -51,22 +51,30 @@ h2 {
     max-width: 100%; /* Prevent the container from overflowing */
     display: flex;  /* Use flex to make image responsive */
     justify-content: center; /* Center image horizontally */
+    overflow: hidden; /* Hide any overflowing content */
 }
 
 img {
     width: 100%; /* Ensure the image takes up full container width */
-    height: 100%; /* Maintain aspect ratio */
-    /* max-height: 75vh;  Make the image take up 75% of the viewport height */
-    /* max-width: 100%; /* Ensure it scales within the container */
-    object-fit: contain; /* Maintain aspect ratio without stretching */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 75vh; /* Make the image take up 75% of the viewport height */
+    max-width: 100%; /* Ensure it scales within the container */
+    object-fit: cover; /* Maintain aspect ratio without stretching */
     border-radius: 10px; /* Optional: rounded corners for the image */
     
 }
 
 /* Paragraph Styles */
-p {
+p1 {
     font-family: 'Amatic SC', cursive;
     font-size: 2em;
+    color: black;
+    margin-top: 20px;
+    padding: 10px;
+}
+p2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
     color: black;
     margin-top: 20px;
     padding: 10px;
