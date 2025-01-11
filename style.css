@@ -11,12 +11,13 @@ body {
     background-color: #f4e1c1; /* Set the background color */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
     text-align: center;
     height: 100vh;
     margin: 0;
     padding: 20px;
+    overflow: hidden; /* Prevent overflow */
 }
 
 /* Content Wrapper */
@@ -26,12 +27,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center; /* Ensure the text is centered */
 }
 
 /* Header Styles */
 .header h1 {
     font-size: 8vw; /* Responsive font size based on viewport width */
-    color: #2c3e50; /* Dark blue/gray color for the header */
+    color: black; /* All text in black */
     margin: 0;
     line-height: 1.1;
     font-family: 'Luckiest Guy', cursive;
@@ -39,7 +41,7 @@ body {
 
 .header h2 {
     font-size: 4vw; /* Slightly smaller font for Protein Lattes */
-    color: #34495e; /* Lighter blue/gray color for the subheader */
+    color: black; /* All text in black */
     margin-top: 0;
     font-family: 'Luckiest Guy', cursive;
 }
@@ -64,7 +66,7 @@ body {
 p {
     font-family: 'Amatic SC', cursive;
     font-size: 2em; /* Smaller size for the paragraph text */
-    color: #8e44ad; /* Purple color for the paragraph text */
+    color: black; /* All text in black */
     margin-top: 20px;
     padding: 10px;
     line-height: 1.4;
@@ -89,6 +91,12 @@ p {
     /* Restrict image height further on small screens */
     .image-container img {
         max-height: 40vh;
+    }
+
+    /* Make sure content doesn't overflow the screen on mobile */
+    body {
+        padding: 20px;
+        overflow-y: auto; /* Allow scrolling if content overflows */
     }
 }
 
