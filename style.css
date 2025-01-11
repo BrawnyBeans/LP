@@ -1,4 +1,4 @@
-/* Reset default styles */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,112 +8,108 @@
 /* Body Styles */
 body {
     font-family: 'Luckiest Guy', cursive;
-    background-color: #f4e1c1; /* Set the background color */
+    background-color: #f4e1c1;
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically center the content */
-    align-items: center; /* Horizontally center the content */
+    justify-content: center;  /* Horizontally center the content */
+    align-items: center;      /* Vertically center the content */
     text-align: center;
     height: 100vh;
     margin: 0;
-    padding: 20px;
-    overflow: hidden; /* Prevent overflow */
+    flex-direction: column;   /* Stack all elements vertically */
+    overflow: auto;           /* Allow scrolling if needed */
 }
 
 /* Content Wrapper */
 .content {
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Ensure the text is centered */
+    flex-direction: column;   /* Stack content vertically */
+    align-items: center;      /* Horizontally center the content */
+    justify-content: flex-start;  /* Align items at the start */
+    width: 100%;  /* Allow content to take up full width */
+    max-width: 100%; /* Prevent content from overflowing */
+    padding: 20px;  /* Padding to prevent content from touching edges */
+    text-align: center; /* Center the text */
 }
 
 /* Header Styles */
-.header h1 {
-    font-size: 8vw; /* Responsive font size based on viewport width */
-    color: black; /* All text in black */
+.header {
+    margin-bottom: 20px;  /* Space between header and image */
+}
+
+h1 {
+    font-size: 4em;
+    color: black;
     margin: 0;
-    line-height: 1.1;
-    font-family: 'Luckiest Guy', cursive;
 }
 
-.header h2 {
-    font-size: 4vw; /* Slightly smaller font for Protein Lattes */
-    color: black; /* All text in black */
-    margin-top: 0;
-    font-family: 'Luckiest Guy', cursive;
+h2 {
+    font-size: 1.5em;
+    color: black;
+    margin: 0;
 }
 
-/* Image Section */
+/* Image Container */
 .image-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    margin-bottom: 20px;  /* Space between image and paragraph */
+    width: 80%; /* Limit the image container size */
+    flex-shrink: 0;  /* Prevent the image from shrinking */
 }
 
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    max-height: 50vh; /* Restrict the image height to 50% of the viewport height */
-    object-fit: contain; /* Ensure the image scales well */
-    border-radius: 10px;
+img {
+    max-width: 100%; /* Ensure the image does not overflow the container */
+    max-height: 40vh; /* Limit image height to 40% of the viewport height */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners for the image */
 }
 
-/* Footer Styles */
+/* Paragraph Styles */
 p {
     font-family: 'Amatic SC', cursive;
-    font-size: 2em; /* Smaller size for the paragraph text */
-    color: black; /* All text in black */
+    font-size: 2em;
+    color: black;
     margin-top: 20px;
     padding: 10px;
-    line-height: 1.4;
-    text-align: center;
-}
-
-/* Media Queries for Mobile */
-@media (max-width: 767px) {
-    /* Adjust header font size for smaller screens */
-    .header h1 {
-        font-size: 10em;
-    }
-    .header h2 {
-        font-size: 5em;
-    }
-
-    /* Adjust paragraph size for mobile */
-    p {
-        font-size: 1.5em;
-    }
-
-    /* Restrict image height further on small screens */
-    .image-container img {
-        max-height: 40vh;
-    }
-
-    /* Make sure content doesn't overflow the screen on mobile */
-    body {
-        padding: 20px;
-        overflow-y: auto; /* Allow scrolling if content overflows */
-    }
 }
 
 /* Media Queries for Larger Screens (Desktop) */
 @media (min-width: 768px) {
-    .header h1 {
-        font-size: clamp(4em, 8vw, 10em); /* Fluid typography */
+    /* Adjust image size for desktop */
+    img {
+        max-height: 40vh; /* Reduce image height for large screens */
     }
-    .header h2 {
-        font-size: clamp(2.5em, 4vw, 5em); /* Fluid typography */
+
+    /* Adjust font size for larger screens */
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2em;
     }
 
     p {
-        font-size: 2em; /* Keep the paragraph size consistent on larger screens */
+        font-size: 2.5em;
+    }
+}
+
+/* Media Queries for Small Screens (Mobile) */
+@media (max-width: 767px) {
+    /* Adjust image size for mobile */
+    img {
+        max-height: 35vh; /* Reduce image height on mobile */
     }
 
-    .image-container img {
-        max-height: 50vh; /* Allow larger images on desktop */
+    /* Adjust font size for mobile */
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.5em;
+        margin-top: 10px; /* Reduce margin on mobile for more space */
     }
 }
