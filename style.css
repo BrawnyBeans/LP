@@ -33,7 +33,7 @@ body {
 
 /* Header Styles */
 h1 {
-    font-size: 8vw;  /* Responsive font size based on viewport width */
+    font-size: 12vw;  /* Responsive font size based on viewport width */
     color: black;
     margin: 0;
     line-height: 1.1;  /* Adjust line height for spacing between lines */
