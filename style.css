@@ -47,14 +47,18 @@ h2 {
 /* Image Container */
 .image-container {
     margin-bottom: 20px;  /* Space between image and paragraph */
-    width: 80%; /* Limit the image container size */
-    flex-shrink: 0;  /* Prevent the image from shrinking */
+    width: 100%;  /* Full width */
+    max-width: 100%; /* Prevent the container from overflowing */
+    display: flex;  /* Use flex to make image responsive */
+    justify-content: center; /* Center image horizontally */
 }
 
 img {
-    max-width: 100%; /* Ensure the image does not overflow the container */
-    max-height: 60vh; /* Increase image height to 60% of the viewport height */
+    width: 100%; /* Ensure the image takes up full container width */
     height: auto; /* Maintain aspect ratio */
+    max-height: 75vh; /* Make the image take up 75% of the viewport height */
+    max-width: 100%; /* Ensure it scales within the container */
+    object-fit: cover; /* Maintain aspect ratio without stretching */
     border-radius: 10px; /* Optional: rounded corners for the image */
 }
 
@@ -82,7 +86,7 @@ p {
 
     /* Larger image size on desktop */
     img {
-        max-height: 60vh; /* Increase image size further on desktop */
+        max-height: 80vh; /* Increase image height further on desktop */
     }
 }
 
@@ -102,6 +106,6 @@ p {
 
     /* Larger image size on mobile */
     img {
-        max-height: 50vh; /* Increase image height to 50% of the viewport height */
+        max-height: 60vh; /* Make the image taller on mobile */
     }
 }
