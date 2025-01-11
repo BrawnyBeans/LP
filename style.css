@@ -17,34 +17,40 @@ body {
     text-align: center;
 }
 
-/* h1 - Font Size Adjustment */
+/* Default Header Styles */
 .content h1 {
-    font-size: 12vw !important; /* Default font size based on viewport width */
+    font-size: clamp(4em, 12vw, 10em); /* Fluid typography */
     color: black;
     margin: 0;
     line-height: 1.1;
     font-family: 'Luckiest Guy', cursive !important;
 }
 
-/* Adjustments for Mobile Screens */
+/* Mobile (max-width: 767px) */
 @media (max-width: 767px) {
     .content h1 {
-        font-size: 8em !important;  /* Reduce size on mobile */
-        line-height: 1.1;
+        font-size: clamp(4em, 10vw, 7em); /* Adjust font size specifically for mobile */
+        line-height: 1.1; /* Better readability on small screens */
+        margin-bottom: 20px; /* Space below h1 */
     }
+
     .content h2 {
-        font-size: 2em;
+        font-size: 2.5em;
+        margin-top: 10px;
     }
+
     p {
-        font-size: 1.5em !important;
+        font-size: 1.5em !important; /* Smaller text for better readability on mobile */
+        margin-top: 10px;
     }
 }
 
-/* Adjustments for Larger Screens (Desktop) */
+/* Desktop (min-width: 768px) */
 @media (min-width: 768px) {
     .content h1 {
-        font-size: 12vw !important; /* Keep large size for desktop */
+        font-size: clamp(4em, 12vw, 10em); /* Large font size for desktop, fluid scaling */
     }
+
     p {
         font-size: 2em;
     }
