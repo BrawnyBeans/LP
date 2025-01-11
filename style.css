@@ -37,7 +37,7 @@ body {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 5em;
     color: black;
     margin: 0;
 }
@@ -80,7 +80,7 @@ p {
 
     /* Adjust font size for larger screens */
     h1 {
-        font-size: 5em;
+        font-size: 6em;
     }
 
     h2 {
@@ -101,7 +101,7 @@ p {
 
     /* Adjust font size for mobile */
     h1 {
-        font-size: 3em;
+        font-size: 4em;
     }
 
     h2 {
