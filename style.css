@@ -60,6 +60,7 @@ img {
     max-width: 100%; /* Ensure it scales within the container */
     object-fit: cover; /* Maintain aspect ratio without stretching */
     border-radius: 10px; /* Optional: rounded corners for the image */
+    overflow: hidden; /* Hide any overflowing content */
 }
 
 /* Paragraph Styles */
