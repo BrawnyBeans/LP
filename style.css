@@ -2,6 +2,7 @@ body{
     font-family: 'Luckiest Guy', cursive;
     background-color: #f4e1c1;
     display:flex;
+    flex-direction: column;/*stack the content vertically*/
     justify-content: center;/*center the content horizontally*/
     align-items: center;/*center the content vertically*/
     text-align: center;/*center the text*/
@@ -9,7 +10,16 @@ body{
     height: 100vh;
     margin:0;
 }
+.content{
+    display:flex;
+    flex-direction: column;/*stack the sectionsy*/
+    align-items: center;
+}
 
+.header{
+    margin-top: 0;
+    margin-bottom: 20px;/*add space between the header and the image*/
+}
 h1{
     font-family: 'Luckiest Guy', cursive;
     font-size: 4em;
@@ -23,7 +33,13 @@ h2{
     color:black;
     margin: 0;
 }
-
+.image-container{
+    margin-bottom:20px;/*add space between the image and the paragraph*/
+}
+img{
+    max-width: 100%;/*make the image responsive*/
+    height:auto;/*make the image responsive*/
+}
 p{
     font-family: 'Amatic SC', cursive;
     font-size: 2em;
