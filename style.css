@@ -51,6 +51,7 @@ h2 {
     max-width: 100%; /* Prevent the container from overflowing */
     display: flex;  /* Use flex to make image responsive */
     justify-content: center; /* Center image horizontally */
+    overflow: hidden; /* Hide any overflowing content */
 }
 
 img {
@@ -60,7 +61,7 @@ img {
     max-width: 100%; /* Ensure it scales within the container */
     object-fit: cover; /* Maintain aspect ratio without stretching */
     border-radius: 10px; /* Optional: rounded corners for the image */
-    overflow: hidden; /* Hide any overflowing content */
+    
 }
 
 /* Paragraph Styles */
