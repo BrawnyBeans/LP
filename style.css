@@ -16,6 +16,7 @@ body {
     height: 100vh;
     margin: 0;
     flex-direction: column;   /* Stack all elements vertically */
+    overflow: hidden;         /* Prevent scrolling */
 }
 
 /* Content Wrapper */
@@ -25,6 +26,7 @@ body {
     align-items: center;      /* Horizontally center the content */
     justify-content: center;  /* Vertically center the content */
     width: 100%;  /* Allow content to take up full width */
+    max-width: 100%; /* Prevent content from overflowing */
 }
 
 /* Header Styles */
@@ -47,10 +49,12 @@ h2 {
 /* Image Container */
 .image-container {
     margin-bottom: 20px;  /* Space between image and paragraph */
+    width: 80%; /* Limit the image container size */
 }
 
 img {
-    max-width: 80%; /* Ensure the image does not overflow the container */
+    max-width: 100%; /* Ensure the image does not overflow the container */
+    max-height: 50vh; /* Limit image height to 50% of the viewport height */
     height: auto;
     border-radius: 10px; /* Optional: rounded corners for the image */
 }
