@@ -1,55 +1,51 @@
-/* Reset default margins and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styles */
+/* Global Styles */
 body {
     font-family: 'Luckiest Guy', cursive;
     background-color: #f4e1c1;
     display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 100vh;
     margin: 0;
+    flex-direction: column;
+}
+
+.content {
+    padding: 20px;
+    width: 100%;
     text-align: center;
-    flex-direction: column;   /* Stack elements vertically */
 }
 
-/* Header Section */
-h1 {
-    font-size: 15vw; /* Make font size responsive based on viewport width */
+/* h1 - Font Size Adjustment */
+.content h1 {
+    font-size: 12vw !important; /* Default font size based on viewport width */
     color: black;
-    margin-bottom: 20px; /* Space between h1 and image */
+    margin: 0;
+    line-height: 1.1;
+    font-family: 'Luckiest Guy', cursive !important;
 }
 
-h2 {
-    font-size: 3vw; /* Smaller font size for h2 */
-    color: black;
-    margin-bottom: 20px; /* Space between h2 and image */
+/* Adjustments for Mobile Screens */
+@media (max-width: 767px) {
+    .content h1 {
+        font-size: 8em !important;  /* Reduce size on mobile */
+        line-height: 1.1;
+    }
+    .content h2 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.5em !important;
+    }
 }
 
-/* Image Container */
-.image-container {
-    width: 100%;
-    max-height: 50vh; /* Limit image height to 50% of viewport */
-    overflow: hidden; /* Prevent image from overflowing */
-    display: flex;
-    justify-content: center;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Paragraph Section */
-p {
-    font-family: 'Amatic SC', cursive;
-    font-size: 1em; /* Reduced font size for paragraph */
-    color: black;
-    margin-top: 20px; /* Space between image and paragraph */
+/* Adjustments for Larger Screens (Desktop) */
+@media (min-width: 768px) {
+    .content h1 {
+        font-size: 12vw !important; /* Keep large size for desktop */
+    }
+    p {
+        font-size: 2em;
+    }
 }
